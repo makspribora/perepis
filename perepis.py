@@ -28,6 +28,8 @@ try:
 
     filtered_data = filter_by_year_range(start_year, end_year, data)
     print(f"Данные людей, родившихся с {start_year} по {end_year} год:")
+    if (len(filtered_data)==0):
+        print("Людей в этом диапозоне не найдено.")
     for person in filtered_data:
         print(f"{person[0]} {person[1]} {person[2]} - {person[3]} год")
 
